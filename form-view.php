@@ -13,9 +13,9 @@
 </head>
 <body>
 <div class="container">
-    <h1>Place your order in Antwerpen best restaurant 'HHHK Seafood'</h1>
+    <h1>Place your order in Antwerpen best restaurant 'HHHK' Seafood</h1>
     <?php // Navigation for when you need it ?>
-    <?php /*
+   
     <nav>
         <ul class="nav">
             <li class="nav-item">
@@ -26,7 +26,7 @@
             </li>
         </ul>
     </nav>
-    */ ?>
+
     <form method="post">
         <div class="form-row">
             <div class="form-group col-md-6">
@@ -35,6 +35,7 @@
             </div>
             <div></div>
         </div>
+
 
         <fieldset>
             <legend>Address</legend>
@@ -57,8 +58,11 @@
                 <div class="form-group col-md-6">
                     <label for="zipcode">Zipcode</label>
                     <input type="text" id="zipcode" name="zipcode" class="form-control">
-                </div>
+                    
+                    </div>
             </div>
+
+            
         </fieldset>
 
         <fieldset>
