@@ -1,10 +1,9 @@
 <?php
-
 // This file is your starting point (= since it's the index)
 // It will contain most of the logic, to prevent making a messy mix in the html
 
 // This line makes PHP behave in a more strict way
-declare(strict_types=1);
+
 
 // We are going to use session variables so we need to enable sessions
 session_start();
@@ -21,12 +20,42 @@ function whatIsHappening() {
     var_dump($_SESSION);
 }
 
-// TODO: provide some products (you may overwrite the example)
-$products = [
-    ['name' => 'Your favourite drink', 'price' => 2.5],
-];
+//your products with their price.
+if(isset($_GET["food"]) && $_GET["food"] == 0){
+    $products = [
+        ['name' => 'Cola', 'price' => 2],
+        ['name' => 'Fanta', 'price' => 2],
+        ['name' => 'Sprite', 'price' => 2],
+        ['name' => 'Ice-tea', 'price' => 3],
+    ];
+} else {
+    $products = [
+        ['name' => ' Octopus', 'price' => 15],
+        ['name' => ' Shrimps', 'price' => 12,3],
+        ['name' => ' Salmon', 'price' => 15],
+        ['name' => ' Grilled Fish', 'price' => 4],
+        ['name' => ' Wild Salmon', 'price' => 20],
+    ];
+}
 
-$totalValue = 0;
+function deliveryInfo() {
+    if ($_POST){
+        $email = $_POST['email'];
+        $street = $_POST['street'];
+        $city = $_POST['city'];
+        $streetnumber = $_POST['streetnumber'];
+        $zipcode = $_POST['zipcode'];
+    
+        echo "<li> E-mail: ". $email. "</li>";
+        echo "<li> Street: ". $street. " " .$streetnumber. "</li>";
+        echo "<li> City: ". $city ."</li>";
+        echo "<li> Zipcode: ". $zipcode."</li>";
+    }else {
+        return "";
+    }
+
+}
+
 
 function validate()
 {

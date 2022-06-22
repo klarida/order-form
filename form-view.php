@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>Place your order in antwerpen best restorant 'HHHK'</h1>
+    <h1>Place your order in Antwerpen best restaurant 'HHHK Seafood'</h1>
     <?php // Navigation for when you need it ?>
     <?php /*
     <nav>
